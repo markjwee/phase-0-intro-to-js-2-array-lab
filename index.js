@@ -17,6 +17,18 @@ function destructivelyRemoveFirstCat() {
     return cats.shift()
 }
 
-function appendCat(...name) {
-    return cats.slice(2,2)
+function appendCat(name) {
+    return [...cats, name]
+}
+
+function prependCat(name) {
+    return [name, ...cats]
+}
+
+function removeLastCat() {
+    return [...cats.slice(0,2)]
+}
+
+function removeFirstCat(){
+    return [...cats.slice(1,3)]
 }
